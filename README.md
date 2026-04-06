@@ -178,7 +178,7 @@ Hassan Ali
 Data Scientist and Machine Learning Engineer  
 
 
-## Application Screenshot
+---
 
 ## Application Screenshot
 
