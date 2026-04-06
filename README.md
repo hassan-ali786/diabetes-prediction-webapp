@@ -172,13 +172,16 @@ http://127.0.0.1:5000
 
 ---
 
-## Application Screenshot
-
-![Home Page](screenshots/home_page.png)
-
----
-
 ## Author
 
 Hassan Ali  
 Data Scientist and Machine Learning Engineer  
+
+
+## Application Screenshot
+
+![Healthcare Web App](https://github.com/hassan-ali786/Diabetes-Prediction-Webapp/blob/main/screenshots/home_page.png)
+
+---
+
+
