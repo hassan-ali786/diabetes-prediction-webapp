@@ -4,115 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Healthcare AI Prediction</title>
+<title>Healthcare AI - Diabetes Risk Prediction</title>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<!-- Navbar -->
-
+<!-- NAVBAR -->
 <div class="navbar">
 
-<div class="logo">
-Healthcare AI
+    <div class="logo">
+        Healthcare AI
+    </div>
+
+    <div class="nav-right">
+
+        <span class="accuracy">
+            AI Model Active
+        </span>
+
+    </div>
+
 </div>
 
-<div class="nav-right">
-
-<span class="accuracy">
-Accuracy: {{accuracy}}%
-</span>
-
-</div>
-
-</div>
-
-
-<!-- Main Container -->
-
+<!-- MAIN -->
 <div class="container">
 
-<!-- Left Side -->
+    <!-- LEFT SIDE -->
+    <div class="left">
 
-<div class="left">
+        <h1>Diabetes Risk Prediction System</h1>
 
-<h1>
-AI-Powered Diabetes Prediction
-</h1>
+        <p class="subtitle">
+            Clinical-grade machine learning system designed to assess diabetes risk based on patient health indicators.
+            This tool provides decision support and should not replace medical diagnosis.
+        </p>
 
-<p class="subtitle">
-Enter patient health data to predict diabetes risk using advanced machine learning.
-Fast, accurate, and reliable healthcare intelligence.
-</p>
+        <div class="stats">
 
-<div class="stats">
+            <div class="stat-box">
+                <h3>Algorithm</h3>
+                <p>XGBoost Model</p>
+            </div>
 
-<div class="stat-box">
-<h3>Model</h3>
-<p>Random Forest</p>
-</div>
+            <div class="stat-box">
+                <h3>Performance</h3>
+                <p>~75% Accuracy</p>
+            </div>
 
-<div class="stat-box">
-<h3>Accuracy</h3>
-<p>{{accuracy}}%</p>
-</div>
+            <div class="stat-box">
+                <h3>Status</h3>
+                <p>Operational</p>
+            </div>
 
-<div class="stat-box">
-<h3>Status</h3>
-<p>Active</p>
-</div>
+        </div>
 
-</div>
+    </div>
 
-</div>
+    <!-- RIGHT SIDE -->
+    <div class="right">
 
+        <div class="form-box">
 
-<!-- Right Side Form -->
+            <h2>Patient Clinical Data</h2>
 
-<div class="right">
+            <p class="hint">
+                Enter patient details for diabetes risk prediction
+            </p>
 
-<div class="form-box">
+            <form action="/predict" method="POST">
 
-<h2>Patient Information</h2>
+                <div class="grid">
 
-<form action="/predict" method="POST">
+                    <div>
+                        <label>Pregnancies</label>
+                        <input type="number" name="Pregnancies" required>
+                    </div>
 
-<div class="grid">
+                    <div>
+                        <label>Glucose Level</label>
+                        <input type="number" name="Glucose" required>
+                    </div>
 
-<input type="number" name="Pregnancies" placeholder="Pregnancies" required>
+                    <div>
+                        <label>Blood Pressure</label>
+                        <input type="number" name="BloodPressure" required>
+                    </div>
 
-<input type="number" name="Glucose" placeholder="Glucose Level" required>
+                    <div>
+                        <label>Skin Thickness</label>
+                        <input type="number" name="SkinThickness" required>
+                    </div>
 
-<input type="number" name="BloodPressure" placeholder="Blood Pressure" required>
+                    <div>
+                        <label>Insulin Level</label>
+                        <input type="number" name="Insulin" required>
+                    </div>
 
-<input type="number" name="SkinThickness" placeholder="Skin Thickness" required>
+                    <div>
+                        <label>BMI</label>
+                        <input type="number" step="0.1" name="BMI" required>
+                    </div>
 
-<input type="number" name="Insulin" placeholder="Insulin Level" required>
+                    <div>
+                        <label>Diabetes Pedigree Function</label>
+                        <input type="number" step="0.01" name="DiabetesPedigreeFunction" required>
+                    </div>
 
-<input type="number" step="0.1" name="BMI" placeholder="BMI" required>
+                    <div>
+                        <label>Age</label>
+                        <input type="number" name="Age" required>
+                    </div>
 
-<input type="number" step="0.01" name="DiabetesPedigreeFunction" placeholder="DPF" required>
+                </div>
 
-<input type="number" name="Age" placeholder="Age" required>
+                <button type="submit">
+                    Run Risk Analysis
+                </button>
 
-</div>
+            </form>
 
-<button type="submit">
+        </div>
 
-Predict Risk
-
-</button>
-
-</form>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 

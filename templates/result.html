@@ -1,10 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Prediction Result</title>
+<title>Medical Risk Assessment Report</title>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== PAGE STRUCTURE ===== */
+.report-container{
+    text-align:center;
+}
+
+/* TITLE */
+.report-title{
+    font-size:30px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+/* RESULT STATUS */
+.status{
+    font-size:28px;
+    font-weight:600;
+    margin:10px 0;
+}
+
+/* RISK BADGES */
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:500;
+    margin:10px 0;
+}
+
+.low{
+    background:rgba(34,197,94,0.15);
+    color:#22c55e;
+}
+
+.medium{
+    background:rgba(250,204,21,0.15);
+    color:#facc15;
+}
+
+.high{
+    background:rgba(239,68,68,0.15);
+    color:#ef4444;
+}
+
+/* RISK TEXT */
+.risk-text{
+    font-size:18px;
+    margin-top:10px;
+    opacity:0.85;
+}
+
+/* PROGRESS BAR */
+.bar-wrapper{
+    margin:25px 0;
+    width:100%;
+}
+
+.bar{
+    width:100%;
+    height:14px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+}
+
+.fill{
+    height:100%;
+    width:0%;
+    border-radius:20px;
+    background:linear-gradient(90deg,#22c55e,#facc15,#ef4444);
+    transition:width 1.2s ease-in-out;
+}
+
+/* INFO TEXT */
+.note{
+    font-size:13px;
+    opacity:0.6;
+    margin-top:10px;
+    line-height:1.5;
+}
+
+/* BUTTON */
+.btn{
+    margin-top:25px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(56,189,248,0.4);
+}
+
+</style>
 
 </head>
 
@@ -12,31 +122,54 @@
 
 <div class="container">
 
-<div class="form-box">
+    <div class="form-box report-container">
 
-<h2>Prediction Result</h2>
+        <h2 class="report-title">Medical Risk Assessment Report</h2>
 
-<br>
+        <!-- RESULT STATUS -->
+        {% if result == "Diabetic" %}
+            <div class="status" style="color:#ef4444;">
+                High Probability Condition Detected
+            </div>
+        {% else %}
+            <div class="status" style="color:#22c55e;">
+                Low Probability Condition Detected
+            </div>
+        {% endif %}
 
-<h1>{{result}}</h1>
+        <!-- RISK LEVEL -->
+        {% if risk < 30 %}
+            <div class="badge low">Low Risk</div>
+        {% elif risk < 70 %}
+            <div class="badge medium">Moderate Risk</div>
+        {% else %}
+            <div class="badge high">High Risk</div>
+        {% endif %}
 
-<br>
+        <!-- RISK VALUE -->
+        <div class="risk-text">
+            Risk Probability: <strong>{{risk}}%</strong>
+        </div>
 
-<h3>Risk Probability: {{risk}}%</h3>
+        <!-- PROGRESS BAR -->
+        <div class="bar-wrapper">
+            <div class="bar">
+                <div class="fill" style="width: {{risk}}%;"></div>
+            </div>
+        </div>
 
-<br>
+        <!-- DISCLAIMER -->
+        <p class="note">
+            This analysis is generated using a machine learning model trained on clinical data.
+            It is intended for informational purposes only and does not replace professional medical diagnosis.
+        </p>
 
-<h4>Model Accuracy: {{accuracy}}%</h4>
+        <!-- BUTTON -->
+        <a href="/">
+            <button class="btn">Generate New Assessment</button>
+        </a>
 
-<br>
-
-<a href="/">
-
-<button>Predict Again</button>
-
-</a>
-
-</div>
+    </div>
 
 </div>
 
