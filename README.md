@@ -180,7 +180,7 @@ http://127.0.0.1:5000
 ## Author
 
 Hassan Ali  
-Machine Learning and Data Science Engineer  
+Data Scientits And Machine Learning Engineer
 GitHub: https://github.com/hassan-ali786  
 
 ---
