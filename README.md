@@ -107,7 +107,7 @@ diabetes-prediction-webapp/
 
 ```bash
 git clone https://github.com/hassan-ali786/diabetes-prediction-webapp.git
-cd Healthcare-Disease-Prediction
+cd diabetes-prediction-webapp
 ```
 
 ### 2. Install Dependencies
