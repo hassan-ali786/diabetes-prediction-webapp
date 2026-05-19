@@ -1,4 +1,4 @@
-# Healthcare Disease Prediction Web Application
+# Diabetes Prediction Web Application
 
 An end-to-end Machine Learning web application that predicts the likelihood of diabetes using clinical health parameters. The system leverages supervised learning techniques and provides real-time predictions through a Flask-based web interface.
 
