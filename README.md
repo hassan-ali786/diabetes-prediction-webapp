@@ -71,7 +71,8 @@ Outcome (0 = No Diabetes, 1 = Diabetes)
 ## Project Structure
 
 ```bash
-Diabetes-Disease-Prediction/
+
+diabetes-prediction-webapp/
 ├── app/
 │   └── app.py
 │
@@ -105,7 +106,7 @@ Diabetes-Disease-Prediction/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/hassan-ali786/Healthcare-Disease-Prediction.git
+git clone https://github.com/hassan-ali786/diabetes-prediction-webapp.git
 cd Healthcare-Disease-Prediction
 ```
 
