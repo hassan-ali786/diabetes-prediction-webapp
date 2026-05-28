@@ -95,8 +95,9 @@ diabetes-prediction-webapp/
 │
 ├── train_model.py
 ├── requirements.txt
-├── .gitignore
-└── README.md
+├── README.md
+└──.gitignore
+
 
 ```
 
