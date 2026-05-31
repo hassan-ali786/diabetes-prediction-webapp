@@ -4,6 +4,16 @@ An end-to-end Machine Learning web application that predicts the likelihood of d
 
 ---
 
+
+## Video Demo:
+
+
+https://github.com/user-attachments/assets/1f3a517c-e495-45c7-9237-3371efc88374
+
+
+
+---
+
 ## Project Overview
 
 This application analyzes patient health metrics and predicts diabetes risk while following a complete machine learning lifecycle:
