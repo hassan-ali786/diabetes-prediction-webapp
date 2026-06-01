@@ -7,10 +7,7 @@ An end-to-end Machine Learning web application that predicts the likelihood of d
 
 ## Video Demo:
 
-
-https://github.com/user-attachments/assets/1f3a517c-e495-45c7-9237-3371efc88374
-
-
+<video src="https://github.com/user-attachments/assets/1f3a517c-e495-45c7-9237-3371efc88374" width="100%" controls></video>
 
 ---
 
@@ -192,7 +189,7 @@ http://127.0.0.1:5000
 ## Author
 
 Hassan Ali  
-Data Scientist & Machine Learning Engineer
+Data Scientist & ML Engineer
 
 GitHub: https://github.com/hassan-ali786  
 
