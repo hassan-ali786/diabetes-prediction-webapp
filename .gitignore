@@ -1,45 +1,34 @@
-# Python cache
+# ==========================================
+# Python & Environment Dependencies
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Virtual environment
 venv/
 env/
 ENV/
 .venv/
 
-# Flask / environment
+# ==========================================
+# Flask & Web App Instance Cache
+# ==========================================
 instance/
 .webassets-cache
+.env
 
-# Model files (optional if you don’t want to push large files)
-models/*.pkl
-model/*.pkl
-
-
-# Logs
-*.log
-
-# OS files
+# ==========================================
+# IDEs, Editors & OS Files
+# ==========================================
+.vscode/
+.idea/
+.ipynb_checkpoints/
 .DS_Store
 Thumbs.db
 
-# IDE files
-.vscode/
-.idea/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Environment variables
-.env
-
-# Build / distribution
+# ==========================================
+# Build & Distribution Logs
+# ==========================================
 build/
 dist/
 *.egg-info/
-
-# Pickle cache
-*.pkl
-*.pickle
+*.log
