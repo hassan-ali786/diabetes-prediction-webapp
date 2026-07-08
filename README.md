@@ -193,7 +193,7 @@ Data Scientist & ML Engineer
 
 GitHub: https://github.com/hassan-ali786
 
-LinkedIn: https://linkedin.com/in/your-linkedin-profile
+LinkedIn: https://linkedin.com/in/hassan-ali-datascientist
 
 ---
 
